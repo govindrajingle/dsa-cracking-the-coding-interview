@@ -7,9 +7,29 @@ public class Two_One_RemoveDuplicates {
         System.out.println("Original Linked List:");
         showList(head);
 
-        Node newList = removeDuplicates(head);
+        // Node reNode = removeDuplicates(head);
+        // System.out.println("\nLinked List after Removing Duplicates:");
+        // showList(reNode);
+
+        Node reWithoutBuffer = removeDuplicatesWithoutBuffer(head);
         System.out.println("\nLinked List after Removing Duplicates:");
-        showList(newList);
+        showList(reWithoutBuffer);
+    }
+
+    private static Node removeDuplicatesWithoutBuffer(Node head) {
+        Node current = head;
+        while (current != null) {
+            Node runner = current;
+            while (runner.next != null) {
+                if (current.data == runner.next.data) {
+                    runner.next = runner.next.next;
+                } else {
+                    runner = runner.next;
+                }
+            }
+            current = current.next;
+        }
+        return head;
     }
 
     private static void showList(Node head) {
