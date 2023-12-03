@@ -4,8 +4,6 @@
 
 // Its actually SubString problem
 
-import java.util.Arrays;
-
 public class One_Nine_StringRotation {
     public static void main(String[] args) {
         String s1 = "ABCD";
