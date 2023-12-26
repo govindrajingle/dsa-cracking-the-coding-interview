@@ -1,10 +1,6 @@
 public class StackImplementation {
     static Node top;
 
-    StackImplementation() {
-        this.top = null;
-    }
-
     public static void main(String[] args) {
         StackImplementation stack = new StackImplementation();
         stack.push(11);
